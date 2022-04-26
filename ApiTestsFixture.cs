@@ -42,10 +42,6 @@ public class ApiTestsFixture
         TestSetupScope = TestServer.Services.CreateScope();
         MassTransitTestHarness = TestServer.Services.GetTestHarness();
 
-        MassTransitTestHarness.TestTimeout = TimeSpan.FromHours(1);
-        MassTransitTestHarness.TestInactivityTimeout = TimeSpan.FromHours(1);
-        
         await TestServer.Host.StartAsync();
-        await MassTransitTestHarness.Start();
     }
 }

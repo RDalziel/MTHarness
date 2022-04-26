@@ -21,7 +21,9 @@ public class Startup
 
         services.AddMassTransitTestHarness(x =>
         {
-            x.AddConsumers(typeof(TestConsumerA));
+            x.AddConsumer<TestConsumerA>();
+            x.AddConsumer<TestConsumerB>();
+            x.AddConsumer<TestConsumerC>();
         });
     }
 
