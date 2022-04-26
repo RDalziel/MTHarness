@@ -46,5 +46,6 @@ public class ApiTestsFixture
         MassTransitTestHarness.TestInactivityTimeout = TimeSpan.FromHours(1);
         
         await TestServer.Host.StartAsync();
+        await MassTransitTestHarness.Start();
     }
 }
